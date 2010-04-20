@@ -16,7 +16,7 @@ Requirements:
   Skeinforge (googling skeinforge should help you find the latest version)
 
 Problem: Replicate.rb can't find Skeinforge
-Solution: Replicate.rb relies on having skeinforge accessible to the command line. If you have not added a link to skeinforge to your usr/local/bin (on linux) folder or equivalent please create a link using the "ln" command and then try Replicate.rb again.
+Solution: Replicate.rb relies on having skeinforge accessible to the command line. If you have not added a link to skeinforge to your usr/local/bin (on linux) folder or equivalent please create a link using the "ln" command and then try Maker Of Things again.
 
 Problem: running Replicate.rb -file stalls out after homing but before printing an STL
 Solution: Skeinforge is an INCREDIBLY slow process - I use it because it is far more configurable and reliable then any other reprap stl-> gcode engine. Processing times of up to 15-20 minutes have been noticed so it is entirely possible that you may just have to wait a little longer.
