@@ -66,8 +66,8 @@ class ReprapDriver
       checksum = 0
       line.each_byte { |b| checksum ^= b } #calculate the checksum byte
       line = line +'*'+checksum.to_s+"\n" #add checksum
-	    @port.write line #send the gcode
       puts line
+      @port.write line #send the gcode
       response = ""
       resend_line = {}
       while resend_line.length == 0

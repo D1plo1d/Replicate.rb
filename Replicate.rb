@@ -3,11 +3,12 @@ require 'ReprapDriver'
 def prepare(driver)
 driver.print("
 G90;Absolute
-M104 0;Reset temperature
-G28;Home
-G1 F3000
-G1 X50 Y5 F3000
-")
+M104 0;Reset temperature")
+end
+
+if ARGV.length == 0 then
+  puts "Error: No Command Issued. See README for usage."
+  exit
 end
 
 skeinforge_dir = "/usr/local/skeinforge18/skeinforge/"
@@ -43,6 +44,10 @@ ARGV.each do |arg|
     lastArg = nil
   elsif arg=="-reset" then
     prepare(driver)
+    driver.print("
+G28;Home
+G1 F3000
+G1 X50 Y5 F3000")
   else
     lastArg = arg
   end

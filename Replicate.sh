@@ -1,2 +1,2 @@
-cd /usr/local/Replicate.rb #Your Install Directory Here
-ruby Replicate.rb $@
+dir="/usr/local/Replicate.rb/" #Your Install Directory Here
+ruby ${dir}Replicate.rb $@
