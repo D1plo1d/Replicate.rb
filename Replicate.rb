@@ -12,6 +12,10 @@ end
 
 skeinforge_dir = "/usr/local/skeinforge18/skeinforge/"
 port = ReprapDriver.all[0]
+if (port == nil)
+  puts "Error: No RepRap detected. Please try plugging it in."
+  exit
+end
 puts port
 driver = ReprapDriver.new(port, true)
 
