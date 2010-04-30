@@ -6,7 +6,7 @@ Replicate.rb is a POSIX-only Ruby RepRap Driver and command line interface that 
 Replicate.rb is provided under the GPL 3.0 License Copyright 2010 Rob Gilson
 
 How to Use:
-  ruby Replicate.rb -file "FILE_NAME" #prints either STL or GCode files, automaticaly inserts -reset gcodes before and after the print.
+  ruby Replicate.rb -file "FILE_NAME" #prints either .STL or .GCode files. STL files are processed by Skeinforge.
   ruby Replicate.rb -reset            #resets the RepRap microcontroller, turns off the heater and moves to home
 
 Requirements:
