@@ -12,7 +12,13 @@ if ARGV.length == 0 then
 end
 
 skeinforge_dir = "/usr/local/skeinforge18/skeinforge/"
-port = ReprapDriver.all[0]
+#Manual serial port or autoscan
+if (port_arg = ARGV.index("-port"))
+  port = ARGV[port_arg+1]
+else
+  port = ReprapDriver.all[0]
+end
+
 if (port == nil)
   puts "Error: No RepRap detected. Please try plugging it in."
   exit
