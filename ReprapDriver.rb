@@ -83,9 +83,9 @@ class ReprapDriver
       #== Bad Checksum ==
       #preparing to resend the requested bad checksum line
       #(since we wait for the 'ok' response it must be the line we just sent so any other # = fubar)
-      puts response.to_s + "\n<RESPONSE> Re-sending gcode: "+gcode.to_s
+      $stderr.puts response.to_s + "\n<RESPONSE> Re-sending gcode: "+gcode.to_s
       if line_number != resend_line[0][0] then
-        puts "<RESPONSE> line number is fubared, resetting"
+        $stderr.puts "<RESPONSE> line number is fubared, resetting"
         print("M110") #reset line number
         line_number = (@line_counter+=1) #reset the line number for this gcode we've got to resend
       end
