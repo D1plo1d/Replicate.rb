@@ -56,9 +56,6 @@ ARGV.each do |arg|
 G28;Home
 G1 F3000
 G1 X50 Y5 F3000")
-  elsif arg=="-home" then
-    prepare(driver)
-    driver.print("G28")
   else
     lastArg = arg
   end
