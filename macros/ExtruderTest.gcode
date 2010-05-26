@@ -3,6 +3,7 @@ M104 0;Reset temperature
 G28;Home
 G1 F3000
 G1 X50 Y5 F3000
-M109 S195;set the temperature
+M109 S200;set the temperature
 G92 E0
-G1 X50 Y5 E100 F3000
+G1 X50 F10000
+G1 X50 Y5 E20000 F10000
