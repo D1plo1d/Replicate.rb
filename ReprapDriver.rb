@@ -76,6 +76,7 @@ class ReprapDriver
           if (debug = response.scan(/DEBUG:.*/)[0])!=nil then
             puts debug #echoing debug infor from serial port
           end
+          puts response
           return true # success ^_^
         end
         resend_line = response.scan(/Resend:([0-9]*)[^0-9]/)
