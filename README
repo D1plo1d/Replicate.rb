@@ -12,7 +12,7 @@ How to Use:
 Requirements:
   Ruby (ubuntu: apt-get ruby )
   Ruby Gems (ubuntu: apt-get rubygems)
-  Ruby Serial Port ( gem install serialport )
+  Ruby Serial Port ( gem install serialport ) (windows users see: http://curiosity.roguepenguin.net/?p=35 )
   Skeinforge (googling skeinforge should help you find the latest version)
 
 Problem: Replicate.rb can't find Skeinforge
